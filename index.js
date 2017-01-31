@@ -50,7 +50,7 @@ function parse(str) {
   config.password = auth.splice(1).join(':');
 
   var ssl = result.query.ssl;
-  if (ssl === 'true' || ssl === '1') {
+  if (ssl === 'true' || ssl === '1' || result.query.sslmode === 'require') {
     config.ssl = true;
   }
 
